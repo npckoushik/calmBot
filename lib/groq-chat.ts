@@ -21,7 +21,7 @@ export async function fetchGroqResponse(userText: string, mood: string | null = 
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "llama3-8b-8192", // or llama3-8b-8192
+      model: "llama-3.1-8b-instant", // or llama3-8b-8192
       messages: chatHistory,
       temperature: 0.7,
     }),
@@ -38,3 +38,4 @@ export async function fetchGroqResponse(userText: string, mood: string | null = 
   chatHistory.push({ role: "assistant", content: reply });
   return reply;
 }
+
